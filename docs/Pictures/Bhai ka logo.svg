@@ -1,0 +1,16 @@
+<svg class="board" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <linearGradient id="grad1" x1="0" x2="0" y1="0" y2="1" gradientTransform="rotate(45deg)">
+    <stop offset="0%" stop-color="rgb(226, 55, 55)" />
+    <stop offset="100%" stop-color="rgb(185, 42, 42)" />
+  </linearGradient>
+
+
+  <polyline style="fill: red; outline: none; stroke-width: 1px;"
+    points="406,379 406,417 456,417 456,455 366,455 366,379 406,379 "></polyline>
+  <polyline style="fill: red;"
+    points="366,171 481,171 614,336 564,336 459,207 407,207 407,244 366,244 366,171 "></polyline>
+  <polyline style="fill: red;" 
+    points="677,380 638,380 638,420 588,420 480,288 431,288 564,453 677,453 677,380"></polyline>
+  <polyline style="fill: red;" 
+    points="591,170 678,170 678,243 638,243 638,205 591,205 591,170 "></polyline>
+</svg>
