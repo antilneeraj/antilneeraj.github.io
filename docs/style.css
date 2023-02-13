@@ -213,12 +213,3 @@ form input, form textarea{
     color:#FFF;
     font-size: 12px;
 }
-
-.copyright{
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    background:#262626;
-    font-weight: 300;
-    margin-top: 20px;
-}
