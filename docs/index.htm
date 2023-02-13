@@ -1,21 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neeraj Antil</title>
+    <title>Neeraj | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="navBar">
-        <div class="logo"><img src="Pictures/Logo.svg"></div>
-        <div class="links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#blabla">Testing Section</a>
-            <a href="#contact">Contact</a>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img class="logo" src="Images/Logo.svg" alt="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Achievements</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="head-text">
+                <p>Coding Enthusiast</p>
+                <h1>Hi, I'm <span>NEERAJ</span></h1>
+                <div>
+                    Insightful computer science student who excels at C, Java, Python, MySQl, HTML & CSS with basic
+                    knowledge of JavaScript & PHP.
+                </div>
+                <div class="head-btn">
+                    <!-- linkedin github etc. -->
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- ------- About -------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about_col_1">
+                    <img src="Images/Image.png">
+                </div>
+                <div class="about_col_2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am currently pursuing my Diploma in Computer Engineering from Government Polytechnic Sonipat, which has provided me with a solid foundation in Python, Java, Web Development, MySQL etc. In addition to my academic background, I am also certified in Python, MySQL, Javascript, demonstrating my commitment to staying current with the latest industry trends and advancements.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="cTab('skills')">Skills</p>
+                        <p class="tab-links"onclick="cTab('edu')">Education</p>
+                        <p class="tab-links"onclick="cTab('lang')">Language</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C, Java, Python</span><br>Skilled in Developing Console Based Apps</li>
+                            <li><span>Web Development</span><br>Skilled web developer with expertise in HTML & CSS with working knowledge of JavaScript</li>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces in applications like Figma</li>
+                            <li><span>Problem Solving</span><br>Passionate about coding and problem solving, constantly seeking new challenges to improve my skills</li>
+                            <li><span>Typing</span><br>Average 85 WPM</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="edu">
+                        <ul>
+                            <li><span>2019 - 2020</span><br>Secondary Education<br>Tika Ram Model School (CBSE)</li>
+                            <li><span>2021 - 2022</span><br>Senior Secondary Education<br>Haryana Open School (BSEH)</li>
+                            <li><span>2020 - Current</span><br>Diploma in Computer Engineering<br>Government Polytechnic Sonipat (HSBTE)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="lang">
+                        <ul>
+                            <li><span>Hindi</span><br>Native or bilingual proficiency</li>
+                            <li><span>English</span><br>Professional working proficiency</li>
+                            <li><span>Japanese</span><br>Limited working proficiency</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js" async defer></script>
 </body>
+
 </html>
