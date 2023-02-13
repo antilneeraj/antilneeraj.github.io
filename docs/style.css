@@ -150,3 +150,75 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display: block;
 }
+
+/* ----Contact------ */
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p img{
+    width: 20px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.social{
+    margin-top: 30px;
+}
+
+.social a{
+    display: inline-block;
+    text-decoration: none;
+    color:#ababab;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.btn{
+    display: inline-block;
+    background: #03C04A;
+    color: #FFF;
+    font-size: 15px;
+    cursor:pointer;
+    padding:14px 60px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background .5s;
+}
+
+.btn:hover{
+    background:#03c04cd4;
+}
+
+.contact-right form{
+    width:100%;
+}
+
+form input, form textarea{
+    width:100%;
+    border:0;
+    outline: none;
+    background:#262626;
+    padding: 15px;
+    margin: 15px 0;
+    color:#FFF;
+    font-size: 12px;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background:#262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
