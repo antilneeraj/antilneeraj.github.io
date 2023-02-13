@@ -16,9 +16,9 @@
                 <img class="logo" src="Images/Logo.svg" alt="logo">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#">Achievements</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="head-text">
@@ -42,37 +42,17 @@
             <div class="row">
                 <div class="about_col_1">
                     <img src="Images/Image.png">
+                    <div fade></div>
                 </div>
                 <div class="about_col_2">
                     <h1 class="sub-title">About Me</h1>
                     <p>I am currently pursuing my Diploma in Computer Engineering from Government Polytechnic Sonipat, which has provided me with a solid foundation in Python, Java, Web Development, MySQL etc. In addition to my academic background, I am also certified in Python, MySQL, Javascript, demonstrating my commitment to staying current with the latest industry trends and advancements.</p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="cTab('skill')">Skills</p>
-                        <p class="tab-links"onclick="cTab('edu')">Education</p>
-                        <p class="tab-links"onclick="cTab('lang')">Language</p>
+                        <p class="tab-links">Skills</p>
+                        <p class="tab-links">Education</p>
+                        <p class="tab-links">Language</p>
                     </div>
-                    <div class="tab-contents active-tab" id="skill">
-                        <ul>
-                            <li><span>C, Java, Python</span><br>Skilled in Developing Console Based Apps</li>
-                            <li><span>Web Development</span><br>Skilled web developer with expertise in HTML & CSS with working knowledge of JavaScript</li>
-                            <li><span>UI/UX</span><br>Designing Web/App Interfaces in applications like Figma</li>
-                            <li><span>Problem Solving</span><br>Passionate about coding and problem solving, constantly seeking new challenges to improve my skills</li>
-                            <li><span>Typing</span><br>Average 85 WPM</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="edu">
-                        <ul>
-                            <li><span>2019 - 2020</span><br>Secondary Education<br>Tika Ram Model School (CBSE)</li>
-                            <li><span>2021 - 2022</span><br>Senior Secondary Education<br>Haryana Open School (BSEH)</li>
-                            <li><span>2020 - Current</span><br>Diploma in Computer Engineering<br>Government Polytechnic Sonipat (HSBTE)</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="lang">
-                        <ul>
-                            <li><span>Hindi</span><br>Native or bilingual proficiency</li>
-                            <li><span>English</span><br>Professional working proficiency</li>
-                            <li><span>Japanese</span><br>Limited working proficiency</li>
-                        </ul>
+                    <div class="tab-contents">
                     </div>
                 </div>
             </div>
@@ -80,7 +60,7 @@
     </div>
 
     <!-- ------Contact------ -->
-    <div class="contact">
+    <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -91,9 +71,10 @@
                         <a href="https://linkedin.com/in/neeraj-antil"><img src="Images/linkedin.png"></a>
                         <a href="https://www.github.com/Neeraj-Antil"><img src="Images/github.png"></a>
                     </div>
+                    <a href="Images/NEERAJ RESUME.pdf" class="btn" attributes-list download>Download CV</a> 
                 </div>
                 <div class="contact-right">
-                    <form action="">
+                    <form action="https://formspree.io/f/mjvdyjey" method="POST">
                         <input type="text" placeholder="Your Name" name="name" required>
                         <input type="email" placeholder="Your Email" name="email" required>
                         <textarea name="message" rows="6" placeholder="Your Message"></textarea>
