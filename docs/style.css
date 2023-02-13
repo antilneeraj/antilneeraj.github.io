@@ -4,10 +4,10 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background:#0C0C2A;
 }
 
-/* Main */
-
+/* Navigation Bar */
 .navBar{
     height: 50px;
     width: 100%;
@@ -15,74 +15,13 @@ body{
     padding-left: 70px;
     box-sizing: border-box;
     position: fixed;
-    top: 0;
-    background-color: rgb(241, 241, 241);
-    box-shadow: 0px 0px 5px red;
+    top: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .navBar div a{
     margin: 15px;
-    color: black;
+    color: #FFF;
     text-decoration: none;
-    -webkit-text-stroke: black .01px;
-    transition: -webkit-text-stroke-width .4s;
-}
-.navBar div a:hover{
-    -webkit-text-stroke-width: .25px;
-}
-.navBar div a[href="#contact"]{
-    background: linear-gradient(45deg, rgb(226, 55, 55), rgb(185, 42, 42) 70%);
-    color: white;
-    padding: 5px 20px;
-    font-size: 15px;
-    border-radius: 5px;
-}
-.navBar div a[href="#contact"]:hover{
-    transform: scale(1.1, 1.1);
-    -webkit-text-stroke-width: 0px;
-}
-
-/* Basic Main */
-
-.page{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-/* Home */
-
-#home{
-    padding: 0 6%;
-}
-.references{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.references a{
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    background-color: linear-gradient(to bottom right, white, rgb(241, 241, 241) 30%);
-    box-shadow: 1px 1px 7.5px rgba(255, 0, 0, .75);
-    border-radius: 50%;
-    transition: transform .4s;
-}
-.references a:hover{
-    transform: scale(1.08, 1.08);
-}
-.references a img{
-    height: 75%;
-    width: 75%;
-}
-.references a:nth-child(2) img{
-    height: 60%;
-    width: 60%;
 }
