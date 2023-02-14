@@ -12,6 +12,7 @@ body{
     color:#FFF;
 }
 html{
+    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 /* Main */
@@ -20,11 +21,16 @@ html{
     padding:10px 10%;
 }
 
+#home{
+    height:100vh;
+}
+
 nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
     flex-flow: row wrap;
+    padding:10px 10%;
 }
 
 .logo{
@@ -83,11 +89,29 @@ nav ul li a:hover::after{
     color:#52ff50; 
 }
 
+.head-btn{
+    display: flex;
+    margin-top: 20px;
+}
+
+.head-btn a i, .head-btn a img{
+    margin-right: 20px;
+    color:#FFF;
+    font-size: 45px;
+    box-shadow:0 0 10px#03C04A;
+    border-radius: 50%;
+    transition:transform .5s;
+}
+
+.head-btn a i:hover, .head-btn a img:hover{
+    transform:translateY(-5px);
+}
+
 /* ------- About -------- */
 
 #about{
     color:#ababab;
-    padding: 250px 0;
+    padding: 100px 0;
 }
 
 .row{
