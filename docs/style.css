@@ -14,7 +14,6 @@ body{
 html{
     overflow-x: hidden;
 }
-
 /* Main */
 
 .container{
@@ -137,6 +136,7 @@ nav ul li a:hover::after{
     width:0;
     left: 0;
     bottom:-8px;
+    border-radius: 5px;
     height:3px;
     background:#52ff50;
     transition:.5s;
@@ -163,13 +163,14 @@ nav ul li a:hover::after{
 }
 
 .contact-left p{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
-.contact-left p img{
+.contact-left p i{
     width: 20px;
-    margin-right: 10px;
-    font-size: 25px;
+    font-size: 20px;
+    color:#03C04A;
+    margin-right: 25px;
 }
 
 .contact-right{
@@ -183,9 +184,18 @@ nav ul li a:hover::after{
 .social a{
     display: inline-block;
     text-decoration: none;
-    color:#ababab;
-    font-size: 20px;
+}
+.social a i{
+    color:#FFF;
+    font-size: 30px;
+    width: 30px;
     margin-right: 20px;
+    transition:transform .5s, color .3s;
+}
+
+.social a i:hover{
+    color:#03C04A;
+    transform:translateY(-5px);
 }
 
 .btn{
@@ -193,16 +203,17 @@ nav ul li a:hover::after{
     background: #03C04A;
     color: #FFF;
     font-size: 15px;
+    border:none;
+    outline: none;
     text-decoration: none;
     cursor:pointer;
-    padding:14px 60px;
-    margin-top: 20px;
+    padding:14px 40px;
+    margin: 15px 0 20px 0;
     border-radius: 5px;
-    transition: background .4s;
 }
 
-.btn:hover{
-    background:#03c04cd4;
+.contact-left > .btn{
+    margin-top: 30px;
 }
 
 .contact-right form{
@@ -210,6 +221,7 @@ nav ul li a:hover::after{
 }
 
 form input, form textarea{
+    display: inline-block;
     width:100%;
     border:0;
     outline: none;
@@ -219,4 +231,25 @@ form input, form textarea{
     color:#FFF;
     font-size: 12px;
     resize: none;
+    border-radius: 5px;
+}
+
+form input::placeholder, form textarea::placeholder{
+    color:#ababab;
+}
+
+.footer{
+    display: inline-block;
+    width:100%;
+    background:#262626;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 20px;
+    bottom:0;
+}
+
+#confirmation{
+    display:inline-block;
+    color:#61B752;
+    margin-top: -10px;
 }

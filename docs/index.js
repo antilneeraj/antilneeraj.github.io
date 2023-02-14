@@ -29,3 +29,22 @@ tablinks.forEach((link,index) =>
 )
 
 tablinks[0].click()
+
+// --- Contact Form ---
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwfcxUbfcm9zWX-GtJkOO0uniKKoCHvkRNydanC61veL5M6QVVIyAj4Q2f6JCKIsx8/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.querySelector('#confirmation')
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message Sent Successfully!"
+        setTimeout(() => {
+          msg.innerHTML = ""
+        }, 3000);
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
