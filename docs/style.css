@@ -196,7 +196,7 @@ nav ul li a:hover::after{
     display: inline-block;
     text-decoration: none;
 }
-.social a i{
+.social a[button] i{
     color:#FFF;
     font-size: 30px;
     width: 30px;
@@ -204,7 +204,7 @@ nav ul li a:hover::after{
     transition:transform .5s, color .3s;
 }
 
-.social a i:hover{
+.social a[button] i:hover{
     color:#03C04A;
     transform:translateY(-5px);
 }
@@ -232,6 +232,17 @@ button[type='submit'] > i{
 
 button[type='submit']:hover > i{
     transform:translateX(5px);
+}
+
+.download{
+    background:#0000;
+    border:solid+1px #03C04A;
+    color:#03C04A;
+    transition:background .3s, color .3s;
+}
+.download:hover{
+    background:#03C04A;
+    color:#FFF;
 }
 
 .contact-left > .btn{
