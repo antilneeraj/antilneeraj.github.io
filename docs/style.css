@@ -15,6 +15,26 @@ html{
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
+/* ----- ScrollBar ----- */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #0000;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #03C04A;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #52ff50;
+}
+
 /* Main */
 
 .container{
@@ -300,6 +320,15 @@ form input::placeholder, form textarea::placeholder{
     color:#ababab;
 }
 
+
+#confirmation{
+    display:inline-block;
+    color:#61B752;
+    margin-top: -10px;
+}
+
+/* ---- Footer ---- */
+
 .footer{
     display: inline-block;
     width:100%;
@@ -308,10 +337,4 @@ form input::placeholder, form textarea::placeholder{
     text-align: center;
     margin-top: 20px;
     bottom:0;
-}
-
-#confirmation{
-    display:inline-block;
-    color:#61B752;
-    margin-top: -10px;
 }
