@@ -80,14 +80,14 @@ nav ul li a::after{
     display:block;
     width:0;
     height:2px;
-    margin-left: 40%;
+    margin-left: 30px;
     background:#52ff50;
     border-radius: 5px;
     transition:width .3s;
 }
 
 nav ul li a:hover::after{
-    width:60%;
+    width:calc(100% - 30px);
 }
 
 .head-text{
@@ -281,12 +281,11 @@ button[type='submit']:hover > i{
 .download{
     background:#0000;
     border:solid+1px #03C04A;
-    color:#03C04A;
-    transition:background .3s, color .3s;
+    color:#FFF;
+    transition:background .3s;
 }
 .download:hover{
     background:#03C04A;
-    color:#FFF;
 }
 
 .contact-left > .btn{
