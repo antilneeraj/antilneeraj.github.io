@@ -33,6 +33,7 @@ tablinks[0].click()
 const slideshow = document.querySelector('.slideshow');
 
 const sources = [
+  'Images/Certificate/JAPANESE.jpg',
   'Images/Certificate/JavaScript.jpg',
   'Images/Certificate/Python.jpg',
   'Images/Certificate/SQL.jpg',
