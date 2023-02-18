@@ -1,3 +1,12 @@
+// Clickable Logo to Reload Page
+const logo = document.querySelector('.logo');
+const a = document.createElement('a');
+a.href = "javascript:window.location.reload()";
+
+logo.addEventListener('click', e => a.click())
+
+// ---- Skills Slider ----
+
 const tablinks = [...document.querySelectorAll(".tab-links")];
 const tabcontent = document.querySelector(".tab-contents");
 const lists  = [
@@ -29,6 +38,8 @@ tablinks.forEach((link,index) =>
 )
 
 tablinks[0].click()
+
+// ---- Image Slider ----
 
 const slideshow = document.querySelector('.slideshow');
 
@@ -81,6 +92,7 @@ arrows.forEach((arrow,index) => {
   })
 })
 
+// AutoSlide
 
 const myIntverval = setInterval(() => {
   if(slides[slides.indexOf(currentSlide)+1]){
@@ -91,7 +103,7 @@ const myIntverval = setInterval(() => {
 },5000)
 
 
-// --- Contact Form ---
+// ---- Contact Form ----
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwfcxUbfcm9zWX-GtJkOO0uniKKoCHvkRNydanC61veL5M6QVVIyAj4Q2f6JCKIsx8/exec'
 const form = document.forms['submit-to-google-sheet']
