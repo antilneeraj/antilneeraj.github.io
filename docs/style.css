@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat';
     box-sizing: border-box;
 }
 
@@ -131,7 +131,7 @@ nav ul li a:hover::after{
 
 #about{
     color:#ababab;
-    padding: 100px 0;
+    padding: 100px 0 0;
 }
 
 .row{
@@ -209,6 +209,75 @@ nav ul li a:hover::after{
 .tab-contents ul li span{
     font-size: 14px;
     color:#03C04A;
+}
+
+/* ---- Achievements ---- */
+
+#achievements{
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+#achievements .sub-title{
+    text-align: center;
+}
+#achievements .slideshow [arrows] div{
+    font-family: consolas;
+    font-size: 50px;
+    cursor: pointer;
+    color: #ababab;
+    transition: color .3s;
+}
+#achievements .slideshow [arrows] div:hover{
+    color: #03C04A;
+}
+.slideshow{
+    width: 80%;
+    height: 500px;
+    display: flex;
+    position: relative;
+}
+.slideshow [arrows]{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    z-index: 1;
+    height: 100%;
+}
+.slides{
+    height: 100%;
+    min-width: 600px;
+    position: relative;
+    opacity: 0;
+    z-index: 5;
+    transition: margin-left .3s ,opacity .3s, transform .3s;
+}
+.slides .photo{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.active{
+    opacity: 1 !important;
+    transform: none;
+    z-index: 5;
+}
+.fade{
+    opacity: .5 !important;
+    z-index: 4;
+}
+.fadeLeft{
+    transform: perspective(1000px) rotateY(45deg) translate(350px, 0);
+}
+.fadeRight{
+    transform: perspective(1000px) rotateY(-45deg) translate(-350px, 0);
 }
 
 /* ----Contact------ */

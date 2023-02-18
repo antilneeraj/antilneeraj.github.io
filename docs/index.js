@@ -21,30 +21,92 @@ const lists  = [
 ]
 
 tablinks.forEach((link,index) => 
-    link.addEventListener('click', e => {
-        tablinks.forEach(tablink => tablink.classList.remove("active-link"))
-        link.classList.add("active-link");
-        tabcontent.innerHTML = lists[index];
-    })
+  link.addEventListener('click', e => {
+    tablinks.forEach(tablink => tablink.classList.remove("active-link"))
+    link.classList.add("active-link");
+    tabcontent.innerHTML = lists[index];
+  })
 )
 
 tablinks[0].click()
 
+const slideshow = document.querySelector('.slideshow');
+
+const sources = [
+  'Images/Certificate/JavaScript.jpg',
+  'Images/Certificate/Python.jpg',
+  'Images/Certificate/SQL.jpg',
+  'Images/Certificate/Typing.jpg',
+  'Images/Certificate/CyberSecurityEssentials.jpg',
+];
+[...slideshow.querySelectorAll('.photo')].forEach((elem, index) => elem.style.backgroundImage=`url('${sources[index]}')`)
+const arrows = [...slideshow.querySelector('[arrows]').children];
+const slides = [...slideshow.querySelectorAll('.slides')];
+
+const getStyle = (elem, prop) => Number(getComputedStyle(elem)[prop].replace('px',''));
+
+function setCurrentSlide(slide){
+  currentSlide = slide;
+  const index = slides.indexOf(slide);
+  slides[index+1]?.classList.add('fadeRight', 'fade');
+  slides[index-1]?.classList.add('fadeLeft', 'fade');
+  slides[index+1]?.classList.remove('active');
+  slides[index-1]?.classList.remove('active');
+  slides[0].style.marginLeft = `${-(slides.indexOf(slide)*600)+(getStyle(slideshow, 'width')-getStyle(slides[0], 'width'))/2}px`;
+  slide.classList.add('active');
+  slide.classList.remove('fade', 'fadeLeft', 'fadeRight');
+}
+let currentSlide;
+setCurrentSlide(slides[0]);
+arrows.forEach((arrow,index) => {
+  arrow.addEventListener('click', e => {
+    if(index%2 === 0){
+      if(slides[slides.indexOf(currentSlide)-1]){
+        setCurrentSlide(slides[slides.indexOf(currentSlide)-1])
+      }if(!slides[slides.indexOf(currentSlide)-1]){
+        arrow.style.opacity = .5;
+      }else{
+        arrow.style.opacity = 1;
+      }
+    }else{
+      if(slides[slides.indexOf(currentSlide)+1]){
+        setCurrentSlide(slides[slides.indexOf(currentSlide)+1])
+      }if(!slides[slides.indexOf(currentSlide)+1]){
+        arrow.style.opacity = .5;
+      }else{
+        arrow.style.opacity = 1;
+      }
+    }
+  })
+})
+
+
+const myIntverval = setInterval(() => {
+  if(slides[slides.indexOf(currentSlide)+1]){
+    setCurrentSlide(slides[slides.indexOf(currentSlide)+1]);
+  }else{
+    setCurrentSlide(slides[0]);
+  }
+},5000)
+
+
 // --- Contact Form ---
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwfcxUbfcm9zWX-GtJkOO0uniKKoCHvkRNydanC61veL5M6QVVIyAj4Q2f6JCKIsx8/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.querySelector('#confirmation')
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwfcxUbfcm9zWX-GtJkOO0uniKKoCHvkRNydanC61veL5M6QVVIyAj4Q2f6JCKIsx8/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.querySelector('#confirmation')
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      if(response.ok){
         msg.innerHTML = "Message Sent Successfully!"
         setTimeout(() => {
           msg.innerHTML = ""
         }, 3000);
         form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
+      }
+    })
+    .catch(error => console.error('Error!', error.message))
+})
