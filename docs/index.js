@@ -1,9 +1,19 @@
+// gotoTop
+const gotoTop = document.querySelector('.gotoTop');
+document.addEventListener('scroll', e => document.documentElement.scrollTop>0?gotoTop.classList.add('show'):gotoTop.classList.remove('show'))
+gotoTop.addEventListener('click', e => document.documentElement.scrollTop=0)
+
 // Clickable Logo to Reload Page
 const logo = document.querySelector('.logo');
 const a = document.createElement('a');
 a.href = "javascript:window.location.reload()";
 
 logo.addEventListener('click', e => a.click())
+
+// Nav
+
+const navBar = document.querySelector('nav');
+document.addEventListener('scroll', e => document.documentElement.scrollTop>0?navBar.classList.add('scrolled'):navBar.classList.remove('scrolled'))
 
 // ---- Skills Slider ----
 
