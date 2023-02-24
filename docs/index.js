@@ -85,18 +85,10 @@ arrows.forEach((arrow,index) => {
     if(index%2 === 0){
       if(slides[slides.indexOf(currentSlide)-1]){
         setCurrentSlide(slides[slides.indexOf(currentSlide)-1])
-      }if(!slides[slides.indexOf(currentSlide)-1]){
-        arrow.style.opacity = .5;
-      }else{
-        arrow.style.opacity = 1;
       }
     }else{
       if(slides[slides.indexOf(currentSlide)+1]){
         setCurrentSlide(slides[slides.indexOf(currentSlide)+1])
-      }if(!slides[slides.indexOf(currentSlide)+1]){
-        arrow.style.opacity = .5;
-      }else{
-        arrow.style.opacity = 1;
       }
     }
   })
@@ -104,13 +96,13 @@ arrows.forEach((arrow,index) => {
 
 // AutoSlide
 
-const myIntverval = setInterval(() => {
-  if(slides[slides.indexOf(currentSlide)+1]){
-    setCurrentSlide(slides[slides.indexOf(currentSlide)+1]);
-  }else{
-    setCurrentSlide(slides[0]);
-  }
-},5000)
+// const myIntverval = setInterval(() => {
+//   if(slides[slides.indexOf(currentSlide)+1]){
+//     setCurrentSlide(slides[slides.indexOf(currentSlide)+1]);
+//   }else{
+//     setCurrentSlide(slides[0]);
+//   }
+// },5000)
 
 
 // ---- Contact Form ----
