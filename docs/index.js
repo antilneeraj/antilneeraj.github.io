@@ -60,6 +60,9 @@ const sources = [
   'Images/Certificate/SQL.jpg',
   'Images/Certificate/Typing.jpg',
   'Images/Certificate/CyberSecurityEssentials.jpg',
+  'Images/Certificate/cssCertificate.jpg',
+  'Images/Certificate/python_basic.jpg',
+  'Images/Certificate/problem_solving_basic.jpg',
 ];
 [...slideshow.querySelectorAll('.photo')].forEach((elem, index) => elem.style.backgroundImage=`url('${sources[index]}')`)
 const arrows = [...slideshow.querySelector('[arrows]').children];
