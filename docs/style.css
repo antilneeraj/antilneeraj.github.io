@@ -147,9 +147,6 @@ figure > img{
     border-radius: 50%;
     box-shadow: 0 0 10px 2px #03C04A;
     height: 500px;
-
-    /* -webkit-filter:drop-shadow(0 10px 10px #03C04A);
-    filter:drop-shadow(0 10px 10px #03C04A); */
 }
 
 .head-text p{
@@ -310,8 +307,12 @@ figure > img{
     position: relative;
     opacity: 0;
     z-index: 5;
-    transition: margin-left .3s ,opacity .3s, transform .3s;
+    transition: opacity .3s, transform .3s;
 }
+.slides.first{
+    transition: margin-left .3s;
+}
+
 .slides .photo{
     height: 100%;
     width: 100%;
