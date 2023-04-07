@@ -99,13 +99,13 @@ arrows.forEach((arrow,index) => {
 
 // AutoSlide
 
-// const myIntverval = setInterval(() => {
-//   if(slides[slides.indexOf(currentSlide)+1]){
-//     setCurrentSlide(slides[slides.indexOf(currentSlide)+1]);
-//   }else{
-//     setCurrentSlide(slides[0]);
-//   }
-// },5000)
+const myIntverval = setInterval(() => {
+  if(slides[slides.indexOf(currentSlide)+1]){
+    setCurrentSlide(slides[slides.indexOf(currentSlide)+1]);
+  }else{
+    setCurrentSlide(slides[0]);
+  }
+},5000)
 
 
 // ---- Contact Form ----
