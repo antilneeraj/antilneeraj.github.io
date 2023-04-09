@@ -63,6 +63,14 @@ const sources = [
   'Images/Certificate/cssCertificate.jpg',
   'Images/Certificate/python_basic.jpg',
   'Images/Certificate/problem_solving_basic.jpg',
+  'Images/Certificate/VC.png',
+  'Images/Certificate/RB.png',
+  'Images/Certificate/POIX.png',
+  'Images/Certificate/ITWD.png',
+  'Images/Certificate/HCD.png',
+  'Images/Certificate/FEDSC.png',
+  'Images/Certificate/CIP.png',
+  'Images/Certificate/AR.png'
 ];
 [...slideshow.querySelectorAll('.photo')].forEach((elem, index) => elem.style.backgroundImage=`url('${sources[index]}')`)
 const arrows = [...slideshow.querySelector('[arrows]').children];
