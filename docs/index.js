@@ -68,7 +68,7 @@ const sources = [
   'Images/Certificate/POIX.png',
   'Images/Certificate/ITWD.png',
   'Images/Certificate/HCD.png',
-  'Images/Certificate/FEDSC.png',
+  'Images/Certificate/FEDCS.png',
   'Images/Certificate/CIP.png',
   'Images/Certificate/AR.png'
 ];
