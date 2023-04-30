@@ -1,0 +1,3 @@
+[submodule "docs/walkway"]
+	path = docs/walkway
+	url = https://github.com/ConnorAtherton/walkway.git
