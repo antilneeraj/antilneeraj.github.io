@@ -30,7 +30,7 @@ const lists  = [
     `<ul>
         <li><span>2019 - 2020</span><br>Secondary Education<br>Tika Ram Model School (CBSE)</li>
         <li><span>2021 - 2022</span><br>Senior Secondary Education<br>Haryana Open School (BSEH)</li>
-        <li><span>2020 - Current</span><br>Diploma in Computer Engineering<br>Government Polytechnic Sonipat (HSBTE)</li>
+        <li><span>2020 - 2023</span><br>Diploma in Computer Engineering<br>Government Polytechnic Sonipat (HSBTE)</li>
     </ul>`,
     `<ul>
         <li><span>Hindi</span><br>Native or bilingual proficiency</li>
