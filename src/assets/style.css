@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+::root{
+  --active-link-color: #22c55e;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* Set position: fixed to the blobs */
+.blobs {
+  position: fixed;
+  z-index: -1; /* Push the blobs behind other content */
+}
+
+.i::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  opacity: 20%;
+  background: white;
+  /* Centering */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.i:hover:before {
+  animation: anim-in 0.7s forwards ease-out;
+}
+
+@keyframes anim-in {
+  100% {
+    opacity: 0%;
+    border-radius: 0;
+    width: 600px;
+    height: 600px;
+  }
+  0% {
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    opacity: 20%;
+  }
+}
+
+/* Scrollbar */
+
+/* Set the width and offset-distance of the scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  offset-distance: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 10px;
+}
+
+/* Hide scrollbar in Firefox */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Image Masking */
+#img {
+  background-size: cover;
+  -webkit-mask: url("../assets/Images/paintblob.png");
+  -webkit-mask-size: cover;
+}
