@@ -3,7 +3,9 @@
 
   <navigation />
 
-  <div class="min-h-screen w-full lg:px-40 px-10 flex items-center justify-center">
+  <div
+    class="min-h-screen w-full lg:px-40 px-10 flex items-center justify-center"
+  >
     <div class="relative w-full max-w-lg">
       <!-- Blobs  -->
       <div
@@ -20,7 +22,10 @@
         <section
           class="relative flex flex-col justify-center items-center h-full"
         >
-          <div class="animate-fade-in translate-x-[-10%] h-80 w-80 sm:h-96 sm:w-96 relative" id="img">
+          <div
+            class="animate-fade-in translate-x-[-10%] h-80 w-80 sm:h-96 sm:w-96 relative"
+            id="img"
+          >
             <img
               src="../src/assets/Images/self.png"
               class="translate-x-10 translate-y-5 shadow-inner rounded-full h-80 w-80 sm:h-96 sm:w-96"
@@ -74,15 +79,50 @@
 
   <projectSection />
 
-  <toTop />
+  <footerCopyright />
+
+  <div
+    class="fixed animate-bounce bottom-2 right-2 sm:bottom-10 sm:right-10 z-50"
+  >
+    <button
+      v-show="showButton"
+      @click="scrollToTop"
+      class="bg-gradient-to-br from-green-400 to-green-600 h-12 w-12 rounded-full shadow-2xl cursor-pointer overflow-hidden transform sm:hover:scale-110 scale-[.8] sm:scale-100 active:scale-50 sm:active:scale-95 transition duration-300 ease-out"
+    >
+      <i class="fa-solid fa-arrow-up text-white text-xl"></i>
+    </button>
+  </div>
 </template>
 
 <script setup>
 import navigation from "./components/navigation.vue";
-import toTop from "./components/toTop.vue";
 import typing from "./components/typing.vue";
 import loading from "./components/loading.vue";
 import aboutSection from "./components/aboutSection.vue";
 import projectSection from "./components/projectSection.vue";
+import footerCopyright from "./components/footerCopyright.vue";
+</script>
 
+<script>
+export default {
+  data() {
+    return {
+      showButton: false,
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.showButton = window.scrollY > 100;
+    },
+    scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+  },
+};
 </script>

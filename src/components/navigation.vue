@@ -26,7 +26,9 @@
           >
         </li>
         <li>
-          <a href="#project" class="hover:text-green-300 hidden lg:block">Projects</a>
+          <a href="#project" class="hover:text-green-300 hidden lg:block"
+            >Projects</a
+          >
         </li>
         <li>
           <a href="#" class="hover:text-green-300 hidden lg:block"
@@ -78,7 +80,9 @@
           <a href="#" class="hover:text-green-300">Achievements</a>
         </li>
         <!-- ----Contact Button---- -->
-        <div class="b h-16 w-fit font-quicksand flex justify-center items-center">
+        <div
+          class="b h-16 w-fit font-quicksand flex justify-center items-center"
+        >
           <div
             @click="openModal"
             class="i h-10 w-32 left-[28%] bg-gradient-to-br from-green-400 to-green-600 items-center rounded-full shadow-2xl cursor-pointer absolute grid overflow-hidden transform hover:scale-x-110 hover:scale-y-105 active:scale-95 transition duration-300 ease-out"
@@ -115,10 +119,10 @@
                 @click="closeModal"
               ></i>
             </h2>
-            <hr class="mb-4 border-[#374151]"/>
+            <hr class="mb-4 border-[#374151]" />
             <!-- Contact form -->
 
-            <form class="font-quicksand">
+            <form class="font-quicksand" name="submit-to-google-sheet" @submit="handleSubmit">
               <div class="grid gap-4 mb-4 md:grid-cols-2">
                 <div>
                   <label
@@ -129,6 +133,7 @@
                   <input
                     type="text"
                     id="first_name"
+                    name="FirstName"
                     class="bg-gray-50 mb-2 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="First Name"
                     required
@@ -143,6 +148,7 @@
                   <input
                     type="text"
                     id="last_name"
+                    name="LastName"
                     class="bg-gray-50 mb-2 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Last Name"
                     required
@@ -157,6 +163,7 @@
                   <input
                     type="text"
                     id="company"
+                    name="Company"
                     class="bg-gray-50 mb-2 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Company Name"
                   />
@@ -170,6 +177,7 @@
                   <input
                     type="tel"
                     id="phone"
+                    name="PhoneNumber"
                     class="bg-gray-50 mb-2 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="+91-1234567890"
                     pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$"
@@ -184,6 +192,7 @@
                   <input
                     type="url"
                     id="website"
+                    name="Website"
                     class="bg-gray-50 mb-2 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Website URL"
                   />
@@ -197,6 +206,7 @@
                   <input
                     type="email"
                     id="email"
+                    name="Email"
                     class="bg-gray-50 mb-2 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="john.doe@company.com"
                     required
@@ -212,6 +222,7 @@
                 <textarea
                   type="text"
                   id="Message"
+                  name="Message"
                   class="bg-gray-50 mb-2 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Your Message"
                   required
@@ -221,13 +232,17 @@
               <!-- Submit Button -->
               <div class="flex justify-center mt-4">
                 <button
-                  @click="submitForm"
+                  type="submit"
                   class="w-3/4 bg-gradient-to-br from-green-400 to-green-600 inline-flex justify-center items-center px-6 py-3 text-white font-semibold rounded-full shadow-2xl cursor-pointer transform hover:scale-x-110 hover:scale-y-105 active:scale-95 transition-all duration-300 ease-out"
                 >
                   <span>Submit</span>
                 </button>
               </div>
             </form>
+            <span
+              id="confirmation"
+              class="inline-block text-[#61b752] -mt-4"
+            ></span>
           </div>
         </div>
       </div>
@@ -242,6 +257,8 @@ export default {
       showDropdown: false,
       showModal: false,
       iconClass: "fa-solid fa-bars", // Initial icon class
+      scriptURL:
+        "https://script.google.com/macros/s/AKfycbw85LjQ-e6caj2MoDZkwLAOLCynZ0QH4mwD0jMaKYh0RRwxWVzDT00qFmqff0MOcnQ/exec",
     };
   },
   methods: {
@@ -270,6 +287,23 @@ export default {
         }, 300);
         this.iconClass = "fa-solid fa-bars";
       }
+    },
+    handleSubmit(event) {
+      event.preventDefault();
+      const form = document.forms["submit-to-google-sheet"];
+
+      fetch(this.scriptURL, { method: "POST", body: new FormData(form) })
+        .then(response => {
+          if (response.ok) {
+            alert("Thank you! Your response has been recorded.");
+            form.reset();
+          } else {
+            throw new Error("Network Connection Error! Please try again.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error!", error.message);
+        });
     },
   },
   mounted() {

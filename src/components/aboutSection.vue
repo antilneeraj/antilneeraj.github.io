@@ -141,9 +141,14 @@
                 class="mb-3"
               >
                 <div class="animate-fade-in">
-                  <span :class="currentAbout.color" class="font-k2d">{{ content.head }}</span
+                  <span :class="currentAbout.color" class="font-k2d">{{
+                    content.head
+                  }}</span
                   ><br />
-                  <span v-html="content.body" class="text-sm font-quicksand"></span>
+                  <span
+                    v-html="content.body"
+                    class="text-sm font-quicksand"
+                  ></span>
                 </div>
               </li>
             </ul>
@@ -157,7 +162,7 @@
 import { ref, onMounted } from "vue";
 
 const width = ref(window.innerWidth);
-window.addEventListener('resize', e => width.value = window.innerWidth)
+window.addEventListener("resize", (e) => (width.value = window.innerWidth));
 
 function isScreenSizeSmall() {
   return width.value < 500;

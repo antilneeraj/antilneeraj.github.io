@@ -16,7 +16,7 @@
           Here are some of my projects that I have worked on.
         </p>
         <!-- cards -->
-        <div class="flex flex-wrap gap-x-6">
+        <div class="flex flex-wrap justify-center gap-x-6">
           <div v-for="project in projects" :key="project.title">
             <div
               class="min-h-[350px] max-w-[300px] rounded-2xl shadow-inset mt-24 backdrop-blur-xl bg-frosty px-12"
