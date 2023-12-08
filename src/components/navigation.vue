@@ -3,7 +3,8 @@
 
   <div class="relative flex font-k2d items-center justify-center text-white">
     <nav
-      class="flex items-center justify-between fixed h-16 px-10 lg:px-40 my-0 z-50 translate-y-[50%] w-full"
+      class="lg:grid items-center flex justify-between fixed h-16 px-10 lg:px-40 my-0 z-50 translate-y-[50%] w-full"
+      style="grid-template-columns: 1fr 1.5fr 0fr"
     >
       <div>
         <a
@@ -31,7 +32,7 @@
           >
         </li>
         <li>
-          <a href="#" class="hover:text-green-300 hidden lg:block"
+          <a href="#achievements" class="hover:text-green-300 hidden lg:block"
             >Achievements</a
           >
         </li>
@@ -77,7 +78,7 @@
           <a href="#project" class="hover:text-green-300">Projects</a>
         </li>
         <li class="list-none flex justify-center items-center p-3">
-          <a href="#" class="hover:text-green-300">Achievements</a>
+          <a href="#achievements" class="hover:text-green-300">Achievements</a>
         </li>
         <!-- ----Contact Button---- -->
         <div
@@ -122,7 +123,11 @@
             <hr class="mb-4 border-[#374151]" />
             <!-- Contact form -->
 
-            <form class="font-quicksand" name="submit-to-google-sheet" @submit="handleSubmit">
+            <form
+              class="font-quicksand"
+              name="submit-to-google-sheet"
+              @submit="handleSubmit"
+            >
               <div class="grid gap-4 mb-4 md:grid-cols-2">
                 <div>
                   <label
@@ -293,7 +298,7 @@ export default {
       const form = document.forms["submit-to-google-sheet"];
 
       fetch(this.scriptURL, { method: "POST", body: new FormData(form) })
-        .then(response => {
+        .then((response) => {
           if (response.ok) {
             alert("Thank you! Your response has been recorded.");
             form.reset();

@@ -79,6 +79,8 @@
 
   <projectSection />
 
+  <carousel />
+
   <footerCopyright />
 
   <div
@@ -101,6 +103,7 @@ import loading from "./components/loading.vue";
 import aboutSection from "./components/aboutSection.vue";
 import projectSection from "./components/projectSection.vue";
 import footerCopyright from "./components/footerCopyright.vue";
+import carousel from "./components/carousel.vue";
 </script>
 
 <script>
