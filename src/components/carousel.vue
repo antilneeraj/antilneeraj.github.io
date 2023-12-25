@@ -1,7 +1,7 @@
 <template>
   <div
     id="achievements"
-    class="w-full min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 my-0"
+    class="w-full max-w-[100vw] min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 my-0 overflow-x-hidden"
   >
     <div class="w-full h-full">
       <div class="w-full h-full flex flex-col justify-center items-center">
@@ -16,9 +16,9 @@
           Here are some of my achievements that I have achieved throughout my journey.
         </p>
 
-        <div class="w-[80%] sm:w-[80%] lg:w-[60%] xl:w-[600px] bg-[#0000] h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[600px] mx-auto">
+        <div class="w-[80%] sm:w-[80%] lg:w-[60%] xl:w-[600px] bg-[#0000] h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[600px] mx-auto relative">
           <swiper
-            :class="['w-full h-full bg-[#0000]']"
+            :class="['w-full h-full absolute bg-[#0000]']"
             :effect="'cards'"
             :grabCursor="true"
             :modules="modules"
