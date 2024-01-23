@@ -14,15 +14,14 @@
         />
       </a>
       <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-500 sm:py-2 sm:mt-0 mt-4">
-        © 2023 Neeraj Antil —
+        © 2024 Neeraj Antil —
         <a
           href="
             https://www.github.com/antilneeraj"
           class="text-[#4febf9cc] ml-1"
           rel="noopener noreferrer"
           target="_blank"
-          >@antilneeraj</a
-        >
+          >@antilneeraj</a>
       </p>
       <span class="inline-flex gap-2 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
         <a

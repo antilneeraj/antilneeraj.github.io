@@ -67,6 +67,7 @@
 <script setup>
 import studentImage from '@/assets/Images/student.svg';
 import youtubeImage from '@/assets/Images/youtube.svg';
+import minesweeperImage from '@/assets/Images/minesweeper.png';
 
 const requireImage = (imageName) => {
   switch (imageName) {
@@ -74,8 +75,10 @@ const requireImage = (imageName) => {
       return studentImage;
     case 'youtube.svg':
       return youtubeImage;
+    case 'minesweeper.png':
+      return minesweeperImage;
     default:
-      return ''; // Handle default case if needed
+      return '';
   }
 };
 
@@ -97,6 +100,15 @@ const projects = [
     github: "https://www.github.com/antilneeraj/youtube-clone",
     linkedin: "https://www.linkedin.com/in/neerajantil",
     liveLink: "https://youtubeclone-neeraj.netlify.app/",
+  },
+  {
+    title: "Minesweeper",
+    image: "minesweeper.png",
+    description:
+      "Explore the Minesweeper game, with different difficulty levels for a fun and brain-boosting experience during your free time.",
+    github: "https://github.com/antilneeraj/Minesweeper",
+    linkedin: "https://www.linkedin.com/in/neerajantil",
+    liveLink: "https://antilneeraj.github.io/Minesweeper/",
   },
 ];
 </script>
