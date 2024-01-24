@@ -1,7 +1,7 @@
 <template>
   <div
     id="achievements"
-    class="w-full max-w-[100vw] min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 my-0 overflow-hidden"
+    class="w-full max-w-[100vw] min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 my-0 mt-[3rem] overflow-hidden"
   >
     <div class="w-full h-full">
       <div class="w-full h-full flex flex-col justify-center items-center">

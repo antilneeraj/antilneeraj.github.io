@@ -68,6 +68,7 @@
 import studentImage from '@/assets/Images/student.svg';
 import youtubeImage from '@/assets/Images/youtube.svg';
 import minesweeperImage from '@/assets/Images/minesweeper.png';
+import fBirdImage from '@/assets/Images/fBird.png';
 
 const requireImage = (imageName) => {
   switch (imageName) {
@@ -77,6 +78,8 @@ const requireImage = (imageName) => {
       return youtubeImage;
     case 'minesweeper.png':
       return minesweeperImage;
+    case 'fBird.png':
+      return fBirdImage;
     default:
       return '';
   }
@@ -109,6 +112,15 @@ const projects = [
     github: "https://github.com/antilneeraj/Minesweeper",
     linkedin: "https://www.linkedin.com/in/neerajantil",
     liveLink: "https://antilneeraj.github.io/Minesweeper/",
+  },
+  {
+    title: "Flappy Bird",
+    image: "fBird.png",
+    description:
+      "A fun and interactive game to play in your free time. Try to beat your high score and challenge your friends to beat yours.",
+    github: "https://github.com/antilneeraj/Flappybird",
+    linkedin: "https://www.linkedin.com/in/neerajantil",
+    liveLink: "https://antilneeraj.github.io/Flappybird/",
   },
 ];
 </script>
