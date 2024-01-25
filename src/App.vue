@@ -3,10 +3,10 @@
 
   <div id="cursor" class="cursor">
     <div class="ring ring-transparent">
-      <div><!--Border--></div>
+      <div></div>
     </div>
     <div class="ring ring-transparent">
-      <div><!--Pointer--></div>
+      <div></div>
     </div>
   </div>
 
@@ -58,24 +58,24 @@
           <div class="animate-fade-in-up text-3xl flex gap-10 my-2 text-white">
             <a href="https://www.github.com/antilneeraj" target="_blank"
               ><i
-                class="fa-brands fa-github cursor-pointer hover:text-green-300 transition-all hover:scale-110 active:scale-95 duration-300 ease-in-out"
+                class="fa-brands fa-github  hover:text-green-300 transition-all hover:scale-110 active:scale-95 duration-300 ease-in-out"
               ></i
             ></a>
             <a href="https://linkedin.com/in/neerajantil" target="_blank"
               ><i
-                class="fa-brands fa-linkedin cursor-pointer hover:text-blue-300 transition-all hover:scale-110 active:scale-95 duration-300 ease-in-out"
+                class="fa-brands fa-linkedin  hover:text-blue-300 transition-all hover:scale-110 active:scale-95 duration-300 ease-in-out"
               ></i
             ></a>
             <a
               href="https://discordapp.com/users/1089184217667215501"
               target="_blank"
               ><i
-                class="fa-brands fa-discord cursor-pointer hover:text-[#4febf9cc] transition-all hover:scale-110 active:scale-95 duration-300 ease-in-out"
+                class="fa-brands fa-discord  hover:text-[#4febf9cc] transition-all hover:scale-110 active:scale-95 duration-300 ease-in-out"
               ></i
             ></a>
             <a href="https://www.instagram.com/neerajantill" target="_blank"
               ><i
-                class="fa-brands fa-instagram cursor-pointer hover:text-purple-300 transition-all hover:scale-110 active:scale-95 duration-300 ease-in-out"
+                class="fa-brands fa-instagram  hover:text-purple-300 transition-all hover:scale-110 active:scale-95 duration-300 ease-in-out"
               ></i
             ></a>
           </div>
@@ -98,7 +98,7 @@
     <button
       v-show="showButton"
       @click="scrollToTop"
-      class="bg-gradient-to-br from-green-400 to-green-600 h-12 w-12 rounded-full shadow-2xl cursor-pointer overflow-hidden transform sm:hover:scale-110 scale-[.8] sm:scale-100 active:scale-50 sm:active:scale-95 transition duration-300 ease-out"
+      class="bg-gradient-to-br from-green-400 to-green-600 h-12 w-12 rounded-full shadow-2xl  overflow-hidden transform sm:hover:scale-110 scale-[.8] sm:scale-100 active:scale-50 sm:active:scale-95 transition duration-300 ease-out"
     >
       <i class="fa-solid fa-arrow-up text-white text-xl"></i>
     </button>
@@ -147,7 +147,8 @@ export default {
           e.target.tagName === "BUTTON" ||
           (e.target.parentNode && e.target.parentNode.tagName === "BUTTON") ||
           e.target.tagName === "I" ||
-          e.target.tagName === "IMG"
+          e.target.tagName === "IMG" ||
+          e.target.tagName === "SPAN"
         ) {
           element.style.background = "white";
           element.style.boxShadow = "0 0 10px white";
@@ -158,7 +159,9 @@ export default {
       });
 
       rings.forEach(function (ring) {
-        ring.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`;
+        ring.style.transform = `translate(-50%, -50%)`;
+        ring.style.top = `${e.clientY}px`;
+        ring.style.left = `${e.clientX}px`;
       });
     },
   },
@@ -166,7 +169,11 @@ export default {
 </script>
 
 <style>
-html {
+* {
+  cursor: none;
+}
+
+button{
   cursor: none;
 }
 
@@ -198,10 +205,10 @@ html {
   height: 100%;
 }
 .cursor div:nth-child(1) {
-  transition: transform 0.2s ease-out;
+  transition: top 0.2s ease-out, left 0.2s ease-out;
 }
 .cursor div:nth-child(2) {
-  transition: transform 0.1s ease-out;
+  transition: top 0.1s ease-out, left 0.1s ease-out;
 }
 .cursor div:nth-child(2) div {
   background: #fff;

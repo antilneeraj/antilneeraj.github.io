@@ -37,12 +37,12 @@
                 <div class="flex text-white text-3xl gap-6 mt-2">
                   <a :href="project.github" target="_blank"
                     ><i
-                      class="fa-brands fa-github cursor-pointer hover:text-green-300 transition-all hover:scale-110 active:scale-95 duration-300 ease-in-out"
+                      class="fa-brands fa-github cursor-none hover:text-green-300 transition-all hover:scale-110 active:scale-95 duration-300 ease-in-out"
                     ></i
                   ></a>
                   <a :href="project.linkedin" target="_blank"
                     ><i
-                      class="fa-brands fa-linkedin cursor-pointer hover:text-blue-300 transition-all hover:scale-110 active:scale-95 duration-300 ease-in-out"
+                      class="fa-brands fa-linkedin cursor-none hover:text-blue-300 transition-all hover:scale-110 active:scale-95 duration-300 ease-in-out"
                     ></i
                   ></a>
                 </div>

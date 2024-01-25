@@ -47,7 +47,7 @@
                 :class="{
                   'active-link': currentAbout.for === 'skills',
                 }"
-                class="tab-links after:animate-pulse cursor-pointer flex items-center justify-start gap-2 relative font-k2d"
+                class="tab-links after:animate-pulse cursor-none flex items-center justify-start gap-2 relative font-k2d"
               >
                 <i class="fas fa-check-circle text-green-500"></i>Skills
               </p>
@@ -57,7 +57,7 @@
                 :class="{
                   'active-link': currentAbout.for === 'internship',
                 }"
-                class="tab-links after:animate-pulse cursor-pointer flex items-center justify-start gap-2 relative font-k2d"
+                class="tab-links after:animate-pulse cursor-none flex items-center justify-start gap-2 relative font-k2d"
               >
                 <i class="fa-solid fa-code text-purple-500"></i>Internship
               </p>
@@ -69,7 +69,7 @@
                 :class="{
                   'active-link': currentAbout.for === 'education',
                 }"
-                class="tab-links after:animate-pulse cursor-pointer flex items-center justify-start gap-2 relative font-k2d"
+                class="tab-links after:animate-pulse cursor-none flex items-center justify-start gap-2 relative font-k2d"
               >
                 <i class="fas fa-book text-blue-500"></i>Education
               </p>
@@ -79,7 +79,7 @@
                 :class="{
                   'active-link': currentAbout.for === 'language',
                 }"
-                class="tab-links after:animate-pulse cursor-pointer flex items-center justify-start gap-2 relative font-k2d"
+                class="tab-links after:animate-pulse cursor-none flex items-center justify-start gap-2 relative font-k2d"
               >
                 <i class="fas fa-globe text-yellow-500"></i>Language
               </p>
@@ -96,7 +96,7 @@
               :class="{
                 'active-link': currentAbout.for === 'skills',
               }"
-              class="tab-links after:animate-pulse cursor-pointer flex items-center justify-start gap-2 relative font-k2d"
+              class="tab-links after:animate-pulse cursor-none flex items-center justify-start gap-2 relative font-k2d"
             >
               <i class="fas fa-check-circle text-green-500"></i>Skills
             </p>
@@ -106,7 +106,7 @@
               :class="{
                 'active-link': currentAbout.for === 'education',
               }"
-              class="tab-links after:animate-pulse cursor-pointer flex items-center justify-start gap-2 relative font-k2d"
+              class="tab-links after:animate-pulse cursor-none flex items-center justify-start gap-2 relative font-k2d"
             >
               <i class="fas fa-book text-blue-500"></i>Education
             </p>
@@ -116,7 +116,7 @@
               :class="{
                 'active-link': currentAbout.for === 'internship',
               }"
-              class="tab-links after:animate-pulse cursor-pointer flex items-center justify-start gap-2 relative font-k2d"
+              class="tab-links after:animate-pulse cursor-none flex items-center justify-start gap-2 relative font-k2d"
             >
               <i class="fa-solid fa-code text-purple-500"></i>Internship
             </p>
@@ -126,7 +126,7 @@
               :class="{
                 'active-link': currentAbout.for === 'language',
               }"
-              class="tab-links after:animate-pulse cursor-pointer flex items-center justify-start gap-2 relative font-k2d"
+              class="tab-links after:animate-pulse cursor-none flex items-center justify-start gap-2 relative font-k2d"
             >
               <i class="fas fa-globe text-yellow-500"></i>Language
             </p>

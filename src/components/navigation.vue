@@ -42,7 +42,7 @@
       <div class="b h-16 w-fit flex font-quicksand justify-center items-center">
         <div
           @click="openModal"
-          class="i lg:block hidden h-10 w-32 bg-gradient-to-br from-green-400 to-green-600 items-center rounded-full shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 active:scale-95 transition duration-300 ease-out"
+          class="i lg:block hidden h-10 w-32 bg-gradient-to-br from-green-400 to-green-600 items-center rounded-full shadow-2xl cursor-none absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 active:scale-95 transition duration-300 ease-out"
         ></div>
         <a
           @click="openModal"
@@ -53,7 +53,7 @@
 
       <!-- Responsive Dropdown -->
 
-      <div class="text-2xl cursor-pointer lg:hidden" @click="toggle">
+      <div class="text-2xl cursor-none lg:hidden" @click="toggle">
         <i :class="iconClass"></i>
       </div>
     </nav>
@@ -86,7 +86,7 @@
         >
           <div
             @click="openModal"
-            class="i h-10 w-32 left-[28%] bg-gradient-to-br from-green-400 to-green-600 items-center rounded-full shadow-2xl cursor-pointer absolute grid overflow-hidden transform hover:scale-x-110 hover:scale-y-105 active:scale-95 transition duration-300 ease-out"
+            class="i h-10 w-32 left-[28%] bg-gradient-to-br from-green-400 to-green-600 items-center rounded-full shadow-2xl cursor-none absolute grid overflow-hidden transform hover:scale-x-110 hover:scale-y-105 active:scale-95 transition duration-300 ease-out"
           >
             <a
               @click="openModal"
@@ -116,7 +116,7 @@
             >
               Get In Touch
               <i
-                class="fa-solid fa-xmark cursor-pointer hover:text-red-500 hover:rotate-180 rotate-0 transition-all ease-in-out duration-1000"
+                class="fa-solid fa-xmark cursor-none hover:text-red-500 hover:rotate-180 rotate-0 transition-all ease-in-out duration-1000"
                 @click="closeModal"
               ></i>
             </h2>
@@ -238,7 +238,7 @@
               <div class="flex justify-center mt-4">
                 <button
                   type="submit"
-                  class="w-3/4 bg-gradient-to-br from-green-400 to-green-600 inline-flex justify-center items-center px-6 py-3 text-white font-semibold rounded-full shadow-2xl cursor-pointer transform hover:scale-x-110 hover:scale-y-105 active:scale-95 transition-all duration-300 ease-out"
+                  class="w-3/4 bg-gradient-to-br from-green-400 to-green-600 inline-flex justify-center items-center px-6 py-3 text-white font-semibold rounded-full shadow-2xl cursor-none transform hover:scale-x-110 hover:scale-y-105 active:scale-95 transition-all duration-300 ease-out"
                 >
                   <span>Submit</span>
                 </button>
