@@ -1,6 +1,15 @@
 <template>
   <loading />
 
+  <div id="cursor" class="cursor">
+    <div class="ring ring-transparent">
+      <div><!--Border--></div>
+    </div>
+    <div class="ring ring-transparent">
+      <div><!--Pointer--></div>
+    </div>
+  </div>
+
   <navigation />
 
   <div
@@ -115,9 +124,11 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("mousemove", this.handleMouseMove);
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener("mousemove", this.handleMouseMove);
   },
   methods: {
     handleScroll() {
@@ -126,6 +137,76 @@ export default {
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     },
+    handleMouseMove(e) {
+      const rings = document.querySelectorAll(".ring");
+      const cursordivdiv = document.querySelectorAll(".cursor div div");
+
+      cursordivdiv.forEach(function (element) {
+        if (
+          e.target.tagName === "A" ||
+          e.target.tagName === "BUTTON" ||
+          (e.target.parentNode && e.target.parentNode.tagName === "BUTTON") ||
+          e.target.tagName === "I" ||
+          e.target.tagName === "IMG"
+        ) {
+          element.style.background = "white";
+          element.style.boxShadow = "0 0 10px white";
+        } else {
+          element.style.background = "transparent";
+          element.style.boxShadow = "0 0 10px white";
+        }
+      });
+
+      rings.forEach(function (ring) {
+        ring.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`;
+      });
+    },
   },
 };
 </script>
+
+<style>
+html {
+  cursor: none;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  z-index: 2;
+  pointer-events: none;
+  z-index: 999;
+}
+.cursor div {
+  position: absolute;
+  display: grid;
+  place-items: center;
+}
+.cursor div div {
+  border: 2px solid white;
+  border-radius: 50%;
+  animation: pulse 2.5s linear infinite;
+  box-shadow: 0 0 10px white;
+  transition: transform 0.4s, background 0.4s;
+}
+.cursor div:nth-child(1),
+.cursor div:nth-child(2) {
+  width: 100%;
+  height: 100%;
+}
+.cursor div:nth-child(1) {
+  transition: transform 0.2s ease-out;
+}
+.cursor div:nth-child(2) {
+  transition: transform 0.1s ease-out;
+}
+.cursor div:nth-child(2) div {
+  background: #fff;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+}
+</style>
