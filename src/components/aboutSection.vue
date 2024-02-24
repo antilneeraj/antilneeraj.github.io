@@ -201,15 +201,19 @@ const aboutLists = [
     content: [
       {
         head: "2019 - 2020",
-        body: "Secondary Education<br>Tika Ram Model School (CBSE)",
+        body: "Secondary Education<br><b>Tika Ram Model School (CBSE)</b>",
       },
       {
         head: "2021 - 2022",
-        body: "Senior Secondary Education<br>Haryana Open School (BSEH)",
+        body: "Senior Secondary Education<br><b>Haryana Open School (BSEH)</b>",
       },
       {
         head: "2020 - 2023",
-        body: "Diploma in Computer Engineering<br>Government Polytechnic Sonipat (HSBTE)",
+        body: "Diploma in Computer Engineering<br><b>Government Polytechnic Sonipat (HSBTE)</b>",
+      },
+      {
+        head: "2023 - Present",
+        body: "B.Tech in Computer Science & Engineering - AI & ML<br><b>Maharshi Dayanand University</b>",
       },
     ],
   },
