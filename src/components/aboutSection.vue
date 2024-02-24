@@ -222,12 +222,20 @@ const aboutLists = [
     color: "text-purple-500",
     content: [
       {
-        head: "Junior Web Developer",
-        body: 'Internship at <a class="border-b-2 border-dashed text-purple-200" href="https://www.linkedin.com/company/vexvo/" target="_blank">Vexvo</a> (May 2023 - Present)',
+        head: "Android Developer • Onsite",
+        body: 'Internship at <a class="border-b-2 border-dashed text-purple-200" href="https://www.linkedin.com/company/solitaire-infosys-inc/" target="_blank">Solitaire Infosys Inc.</a><br>(August 2022 - September 2022)',
       },
       {
-        head: "Android Developer",
-        body: 'Internship at <a class="border-b-2 border-dashed text-purple-200" href="https://www.linkedin.com/company/solitaire-infosys-inc/" target="_blank">Solitaire Infosys Inc.</a> (August 2022 - September 2022)',
+        head: "Junior Web Developer • Remote",
+        body: 'Internship at <a class="border-b-2 border-dashed text-purple-200" href="https://www.linkedin.com/company/vexvo/" target="_blank">Vexvo</a><br>(May 2023 - July 2023)',
+      },
+      {
+        head: "Data Analytics • Remote",
+        body: 'Internship at <a class="border-b-2 border-dashed text-purple-200" href="https://www.linkedin.com/company/csrbox/" target="_blank">CSRBOX</a><br>(November 2023)',
+      },
+      {
+        head: "Generative AI • Remote",
+        body: 'Internship at <a class="border-b-2 border-dashed text-purple-200" href="https://www.linkedin.com/company/csrbox/" target="_blank">CSRBOX</a><br>(February 2023 - March 2023)',
       },
     ],
   },
